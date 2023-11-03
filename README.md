@@ -61,8 +61,10 @@ Will run application (exe) from folder you select, from user you created, args c
     );
 ```
 ```
-new KeyValuePair<string, string>("key", variable),
-Save your config to config.json near application.
+
+new KeyValuePair<string, string>("key", variable)
+
+Save your "key", var to config.json near application.
 ```
 
 ## ReadCfg(string key)
