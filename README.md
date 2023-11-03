@@ -39,6 +39,7 @@ But if called like: GetInfo("") then just show all existing users on pc.
     {
     path = Api.Get_FolderPath();
     path_exe = Api.Get_ExePath();
+    ...
     }
 ```
 ```
