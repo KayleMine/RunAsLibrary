@@ -47,7 +47,7 @@ But if called like: GetInfo("") then just show all existing users on pc.
 
 ## run_target(string path, string path_exe, string NameLog, string Pass, string args)
 ```c#
-Api.run_target("C:\appfolder", "app.exe", "name", "password", "-console");
+Api.run_target("C:\\appfolder", "app.exe", "name", "password", "-console");
 ```
 ```
 Will run application (exe) from folder you select, from user you created, args can be "" if not need.
