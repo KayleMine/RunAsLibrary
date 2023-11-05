@@ -109,7 +109,7 @@ namespace RunAsLibrary
             return "";
         }
 
-        public string Get_ExePath()
+        public string Get_Exe()
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
