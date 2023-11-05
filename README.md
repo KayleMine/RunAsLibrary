@@ -33,12 +33,12 @@ Will open cmd window with info about user with name 'name'.
 But if called like: GetInfo("") then just show all existing users on pc.
 ```
 
-## Get_FolderPath() && Get_ExePath()
+## Get_FolderPath() && Get_Exe()
 ```c#
     private void Select_App_Click(object sender, EventArgs e)
     {
     path = Api.Get_FolderPath();
-    path_exe = Api.Get_ExePath();
+    path_exe = Api.Get_Exe();
     ...
     }
 ```
