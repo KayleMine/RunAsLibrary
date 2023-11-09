@@ -121,8 +121,8 @@ namespace RunAsLibrary
 
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    //Get the path of specified file
-                    filePath = openFileDialog.FileName;
+                    //Get the path of specified file 
+                    filePath = openFileDialog.FileName.Replace("\u005C", "\u002F"); //openFileDialog.FileName;
                     path_f = Path.GetFileName(filePath);
                     return path_f;
                 }
