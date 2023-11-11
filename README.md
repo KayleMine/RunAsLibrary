@@ -1,7 +1,7 @@
 # Run As Limited Library
 
 # Add run as limited to your application!
-Example of usage: https://github.com/KayleMine/RunAsLimited2
+Example of usage: [RunAsLimited 2](https://github.com/KayleMine/RunAsLimited2/tree/master)
 
 ## init
 ```c#
