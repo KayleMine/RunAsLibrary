@@ -53,10 +53,20 @@ namespace RunAsLibrary
         }
         public void Remove(string NameLog)
         {
+            DirectoryEntry localDirectory = new DirectoryEntry("WinNT://" + Environment.MachineName.ToString());
+            DirectoryEntries users_list = localDirectory.Children;
+            DirectoryEntry old_user = users_list.Find(NameLog);
+            users_list.Remove(old_user);
+            
+            DirectoryInfo userProfileDirectory = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile));
+            string delete_path = Path.Combine(userProfileDirectory.Parent.FullName, NameLog);
+
+            if (!Directory.Exists(delete_path))  {  return; };
             var proc1 = new ProcessStartInfo();
             string Command;
             proc1.UseShellExecute = true;
-            Command = @"net user " + NameLog + " /delete";
+            Command = @"rd /s /q " + delete_path;
+            Console.WriteLine(Command);
             proc1.WorkingDirectory = @"C:\Windows\System32";
             proc1.FileName = @"C:\Windows\System32\cmd.exe";
             proc1.Verb = "runas";
