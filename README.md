@@ -21,7 +21,7 @@ Will create user with login 'name' and password '1'
 Api.Remove("name")
 ```
 ```
-Will delete user with login 'name'
+Will delete user with login 'name', also remove username folder from C:\users.
 ```
 
 ## GetInfo(string NameLog)
