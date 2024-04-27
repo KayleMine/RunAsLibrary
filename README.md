@@ -1,11 +1,16 @@
 # Run As Limited Library
 
-# Add run as limited to your application!
-> For what? For protection, for example it allow to bypass World of Warcraft Warden scans, same for Path Of Exile AC.
+### Add run as limited to your application!
+> For what? 
+> For protection, it allow to bypass World of Warcraft Warden scans, same for Path Of Exile AC.
 
-Example of usage: [RunAsLimited 2](https://github.com/KayleMine/RunAsLimited2/tree/main)
+> Now after we launched game, from limited user, it can't check any-administrator related stuff, that we run, for example in poe it would be POEHud, in WoW, any kind rotation\bot\fishbot and etc.
 
-## init lib
+#### Example of usage: 
+[RunAsLimited 2](https://github.com/KayleMine/RunAsLimited2/tree/main)
+
+
+#### init lib
 ```c#
 RunAsLibrary.Api Api = new RunAsLibrary.Api();
 ```
