@@ -3,7 +3,7 @@
 # Add run as limited to your application!
 > For what? For protection, for example it allow to bypass World of Warcraft Warden scans, same for Path Of Exile AC.
 
-Example of usage: [RunAsLimited 2](https://github.com/KayleMine/RunAsLimited2/tree/master)
+Example of usage: [RunAsLimited 2](https://github.com/KayleMine/RunAsLimited2/tree/main)
 
 ## init lib
 ```c#
