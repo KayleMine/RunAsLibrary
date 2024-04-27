@@ -1,41 +1,49 @@
 # Run As Limited Library
 
 # Add run as limited to your application!
+> For what? For protection, for example it allow to bypass World of Warcraft Warden scans, same for Path Of Exile AC.
+
 Example of usage: [RunAsLimited 2](https://github.com/KayleMine/RunAsLimited2/tree/master)
 
-## init
+## init lib
 ```c#
 RunAsLibrary.Api Api = new RunAsLibrary.Api();
 ```
 
-## Create(string NameLog, string Pass)
-```c#
-Api.Create("name", "1")
-```
-```
-Will create user with login 'name' and password '1'
+#### Create user
+```c
+  Api.Create("name", "1") //Will create user with login 'name' and password '1'
 ```
 
-## Remove(string NameLog)
-```c#
-Api.Remove("name")
-```
-```
-Will delete user with login 'name', also remove username folder from C:\users.
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `text` | `string` | UserName |
+| `text` | `string` | Password |
+
+
+#### Remove user
+```c
+  Api.Remove("name") // Will remove user with login 'name'.
 ```
 
-## GetInfo(string NameLog)
-```c#
-Api.GetInfo("name")
-```
-```
-Will open cmd window with info about user with name 'name'.
-But if called like: GetInfo("") then just show all existing users on pc.
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `text` | `string` | UserName |
+ 
+#### Get user info
+```c
+  Api.GetInfo("name") // Will get info about user with login 'name'.
+  Api.GetInfo("")     // Will append list of users on pc.
 ```
 
-## Get_FolderPath() && Get_Exe()
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `text` | `string` | UserName or ""|
+
+
+### Get folder path and exe name
 ```c#
-    private void Select_App_Click(object sender, EventArgs e)
+    private void Select_App_Click(object sender, EventArgs e) // an example
     {
     path = Api.Get_FolderPath();
     path_exe = Api.Get_Exe();
@@ -43,35 +51,42 @@ But if called like: GetInfo("") then just show all existing users on pc.
     }
 ```
 ```
-1st get path to folder, 2nd get exe name in that folder.
+1st call will let select folder, 2nd get exe name in that folder.
 ```
 
-## run_target(string path, string path_exe, string NameLog, string Pass, string args)
-```c#
-Api.run_target("C:\\appfolder", "app.exe", "name", "password", "-console");
-```
-```
-Will run application (exe) from folder you select, from user you created, args can be "" if not need.
+#### Run app
+```c
+Api.run_target("C:\\appfolder", "app.exe", "name", "password", "-console"); // will start app.exe under user name with -console
 ```
 
-## SaveCfg(params KeyValuePair<string, string>[] keyValuePairs)
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `text` | `string` | Path to folder |
+| `text` | `string` | Exe name |
+| `text` | `string` | UserName |
+| `text` | `string` | Password |
+| `text` | `string` | Startup args |
+
+#### Save config
 ```c#
-    Api.SaveCfg(
+Api.SaveCfg(                                              // An example
     new KeyValuePair<string, string>("path", path),
     new KeyValuePair<string, string>("path_exe", path_exe)
-    );
+);
 ```
-```
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `string` | `string` | Key |
+| `string` | `string` | Value |
 
-new KeyValuePair<string, string>("key", variable)
 
-Save your "key", var to config.json near application.
-```
 
-## ReadCfg(string key)
+#### Read config
 ```c#
-path = Api.ReadCfg("path");
+Api.ReadCfg("path"); // Get your config data by key.
 ```
-```
-Get your config data by key.
-```
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `string` | `string` | Key |
+
+
