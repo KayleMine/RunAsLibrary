@@ -13,12 +13,12 @@
 [RunAsLimited 2](https://github.com/KayleMine/RunAsLimited2/tree/main)
 
 
-
-#### init lib
+***
+### init lib
 ```c#
 RunAsLibrary.Api Api = new RunAsLibrary.Api();
 ```
-
+***
 #### Create user
 ```c
   Api.Create("name", "1") //Will create user with login 'name' and password '1'
@@ -29,7 +29,7 @@ RunAsLibrary.Api Api = new RunAsLibrary.Api();
 | `text` | `string` | UserName |
 | `text` | `string` | Password |
 
-
+***
 #### Remove user
 ```c
   Api.Remove("name") // Will remove user with login 'name'.
@@ -38,7 +38,8 @@ RunAsLibrary.Api Api = new RunAsLibrary.Api();
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
 | `text` | `string` | UserName |
- 
+***
+***
 #### Get user info
 ```c
   Api.GetInfo("name") // Will get info about user with login 'name'.
@@ -48,8 +49,8 @@ RunAsLibrary.Api Api = new RunAsLibrary.Api();
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
 | `text` | `string` | UserName or ""|
-
-
+***
+***
 ### Get folder path and exe name
 ```c#
     private void Select_App_Click(object sender, EventArgs e) // an example
@@ -62,7 +63,8 @@ RunAsLibrary.Api Api = new RunAsLibrary.Api();
 ```
 1st call will let select folder, 2nd get exe name in that folder.
 ```
-
+***
+***
 #### Run app
 ```c
 Api.run_target("C:\\appfolder", "app.exe", "name", "password", "-console"); // will start app.exe under user name with -console
@@ -75,7 +77,8 @@ Api.run_target("C:\\appfolder", "app.exe", "name", "password", "-console"); // w
 | `text` | `string` | UserName |
 | `text` | `string` | Password |
 | `text` | `string` | Startup args |
-
+***
+***
 #### Save config
 ```c#
 Api.SaveCfg(                                              // An example
@@ -87,9 +90,9 @@ Api.SaveCfg(                                              // An example
 | :-------- | :------- | :------------------------- |
 | `string` | `string` | Key |
 | `string` | `string` | Value |
+***
 
-
-
+***
 #### Read config
 ```c#
 Api.ReadCfg("path"); // Get your config data by key.
@@ -97,5 +100,5 @@ Api.ReadCfg("path"); // Get your config data by key.
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
 | `string` | `string` | Key |
-
+***
 
